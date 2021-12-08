@@ -23,3 +23,10 @@
 ## Arm64相关文档
 
 [Arm64官方手册_查阅C6.2](https://github.com/nzcv/note/releases/download/note_books/DDI0487G_a_armv8_arm.pdf)
+
+## NDK对应clang版本号
+
+```shell
+android-ndk-r20 -> clang version 8.0.7
+android-ndk-r21e -> clang version 9.0.9
+```
