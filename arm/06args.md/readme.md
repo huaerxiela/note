@@ -1,6 +1,8 @@
 
 ![20211205185052](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211205185052.png)
 
+参数传递的本质: 将上层函数变量复制一份, 传给下层函数.
+
 # ARM32调用约定
 
 ## 结构体传参
@@ -94,6 +96,9 @@ hello32:0286B602 ; End of function my_argIsStruct
     A: 目前并不清楚, 和友人一起确认就是废物代码
 
 # ARM64调用约定
+
+参数1~参数8 分别保存到 X0~X7 寄存器中 ，剩下的参数从右往左依次入栈，被调用者实现栈平衡，返回值存放在 X0 中。
+
 
 [https://docs.microsoft.com/zh-cn/cpp/build/arm64-windows-abi-conventions?view=msvc-170](https://docs.microsoft.com/zh-cn/cpp/build/arm64-windows-abi-conventions?view=msvc-170)
 
@@ -279,3 +284,6 @@ hello:00000056BBEAF90C ; End of function my_argIsStruct
 hello:00000056BBEAF854 STUR            X0, [X29,#var_20]                                ;                          stack_var_20 = x0 = 0XA10XA2
 hello:00000056BBEAF858 STUR            X1, [X29,#var_18]                                ;                          stack_var_18 = x1 = 0XA3
 ```
+
+
+[https://www.cnblogs.com/sinferwu/p/12810595.html](https://www.cnblogs.com/sinferwu/p/12810595.html)
