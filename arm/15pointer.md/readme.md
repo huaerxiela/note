@@ -91,3 +91,12 @@ void test03() {
 
 ## *符号的使用
 
+```c
+int x = 10;
+
+int *px = &x;
+int &&ppx = &px;
+int *px1 = *ppx;
+```
+
+![20211210140053](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211210140053.png)
