@@ -27,6 +27,7 @@
 ## NDK对应clang版本号
 
 ```shell
-android-ndk-r20 -> clang version 8.0.7
+android-ndk-r20  -> clang version 8.0.7
 android-ndk-r21e -> clang version 9.0.9
+android-ndk-r22b -> clang varsion 11.0.5 (match https://godbolt.org/)
 ```
