@@ -100,3 +100,8 @@ int *px1 = *ppx;
 ```
 
 ![20211210140053](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211210140053.png)
+
+
+## 指针与数组
+
+![pointer05](https://cdn.jsdelivr.net/gh/nzcv/picgo/pointer05.png)
