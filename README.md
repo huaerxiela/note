@@ -20,6 +20,18 @@
 
 [09.Arm IF Switch对应实现](https://github.com/nzcv/note/tree/master/arm/09if_switch.md)
 
+[10.NZCV标志位](https://github.com/nzcv/note/tree/master/arm/10nzcv.md)
+
+[11.ForWhile汇编解析](https://github.com/nzcv/note/tree/master/arm/11for_while.md)
+
+[12.堆栈对齐stack_aligin汇编解析.md](https://github.com/nzcv/note/tree/master/arm/12stack_aligin.md)
+
+[13.数组array汇编解析.md](https://github.com/nzcv/note/tree/master/arm/13array.md)
+
+[14.结构体struct汇编解析.md](https://github.com/nzcv/note/tree/master/arm/14struct.md)
+
+[15.指针pointer汇编解析.md](https://github.com/nzcv/note/tree/master/arm/15pointer.md)
+
 ## Arm64相关文档
 
 [Arm64官方手册_查阅C6.2](https://github.com/nzcv/note/releases/download/note_books/DDI0487G_a_armv8_arm.pdf)
