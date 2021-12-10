@@ -58,3 +58,8 @@ hello:000000583B9EDE5C BRK             #1
 ```
 
 ![20211208165742](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211208165742.png)
+
+
+# 汇编特征
+
+等宽连续

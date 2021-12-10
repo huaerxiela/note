@@ -1,5 +1,6 @@
-
 # For循环的实现没什么特别的
+
+![20211207215744](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211207215744.png)
 
 指令都学过了, 简单看看就好
 
@@ -58,6 +59,51 @@ int test15() {
 # 关于do While循环
 
 
+```c
+int test16() {
+    int ret = 0;
+    int i = 0;
+    while (i < 100)
+    {
+        ret += i;
+        i++;
+    }    
+    return ret;
+}
+```
+
+```asm
+.text:0000000000000D84                 EXPORT test16
+.text:0000000000000D84 test16                                  ; CODE XREF: main+B8↓p
+.text:0000000000000D84
+.text:0000000000000D84 var_8           = -8
+.text:0000000000000D84 var_4           = -4
+.text:0000000000000D84
+.text:0000000000000D84 ; __unwind {
+.text:0000000000000D84                 SUB             SP, SP, #0x10
+.text:0000000000000D88                 STR             WZR, [SP,#0x10+var_4]                                    ;var4 = 0
+.text:0000000000000D8C                 STR             WZR, [SP,#0x10+var_8]                                    ;var8 = 0
+.text:0000000000000D90
+.text:0000000000000D90 loc_D90                                 ; CODE XREF: test16+34↓j
+.text:0000000000000D90                 LDR             W8, [SP,#0x10+var_8]                                     ;w8 = var8 = 0
+.text:0000000000000D94                 SUBS            W8, W8, #0x64                                            ;w8 = w8 - 100 = -100
+.text:0000000000000D98                 B.GE            loc_DBC                                                  ;if w8 >= 0 break
+.text:0000000000000D9C                 LDR             W9, [SP,#0x10+var_8]                                     ;w9 = var8 = 0
+.text:0000000000000DA0                 LDR             W8, [SP,#0x10+var_4]                                     ;w8 = var4 = 0
+.text:0000000000000DA4                 ADD             W8, W8, W9                                               ;w8 = w8 + w9 = 0
+.text:0000000000000DA8                 STR             W8, [SP,#0x10+var_4]                                     ;var4 = 0
+.text:0000000000000DAC                 LDR             W8, [SP,#0x10+var_8]                                     ;w8 = var8 = 0
+.text:0000000000000DB0                 ADD             W8, W8, #1                                               ;w8 += 1
+.text:0000000000000DB4                 STR             W8, [SP,#0x10+var_8]                                     ;var8 = w8 = 1
+.text:0000000000000DB8                 B               loc_D90                                                  ;loop
+.text:0000000000000DBC ; ---------------------------------------------------------------------------
+.text:0000000000000DBC
+.text:0000000000000DBC loc_DBC                                 ; CODE XREF: test16+14↑j
+.text:0000000000000DBC                 LDR             W0, [SP,#0x10+var_4]
+.text:0000000000000DC0                 ADD             SP, SP, #0x10
+.text:0000000000000DC4                 RET
+.text:0000000000000DC4 ; } // starts at D84
+```
 
 ```c
 int test17() {
@@ -87,7 +133,7 @@ int test17() {
 .text:0000000000000D64                 STR             WZR, [SP,#0x10+var_4]        ;var4 = 0
 .text:0000000000000D68                 STR             WZR, [SP,#0x10+var_8]        ;var8 = 0
 .text:0000000000000D6C
-.text:0000000000000D6C loc_D6C                                 ; CODE XREF: test17+38↓j
+.text:0000000000000D6C loc_D6C                                 ; CODE XREF: test17+38↓j 
 .text:0000000000000D6C                 LDR             W8, [SP,#0x10+var_8]         ;w8 = var8 = 0
 .text:0000000000000D70                 LDR             W9, [SP,#0x10+var_4]         ;w9 = var4 = 0
 .text:0000000000000D74                 ADD             W8, W9, W8                   ;w8 = w8 + w9 = 0
