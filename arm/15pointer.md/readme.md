@@ -105,3 +105,87 @@ int *px1 = *ppx;
 ## 指针与数组
 
 ![pointer05](https://cdn.jsdelivr.net/gh/nzcv/picgo/pointer05.png)
+
+
+## 字符串与数组和指针
+
+```c
+char  *x = "china";
+char y[] = "china";
+
+void testb() {
+    *(x+1) = "A"; // 非法修改
+    y[1] = "A";
+}
+```
+
+```c
+char *a = "if"
+char *b = "for"
+char *c = "while"
+
+char keyword[] = {
+    "if",
+    "for",
+    "while".
+}
+```
+
+## 指针与结构体
+
+```c
+struct Arg
+{
+    int a;
+    int b;
+    int c;
+};
+
+void testc() {
+    //宽度 ++ -- +N -N SUB CMP
+    Arg a;
+    Arg* pArg = &a;
+    //pArg = 
+}
+```
+
+## 指针分类(指针/结构体指针/数组指针/函数指针)
+
+1. 指针
+
+2. 结构体指针
+
+3. 数组指针
+
+```c
+int a[5];           //数组
+int (*pa)[5];       //数组指针
+```
+
+```c
+#include <stdio.h>
+
+void test() {
+    int a[5] = {1, 2, 3, 4, 5};
+    int (*pa)[2];
+    
+    pa = (int (*)[2])a;
+
+    printf("%lx, %lx\n", pa , *pa);
+
+    printf("%lx\n", *(*(pa + 0) + 0)); //pa[0][0] 0*2 + 0
+    printf("%lx\n", *(*(pa + 1) + 1)); //pa[1][1] 1*2 + 1
+    printf("%lx\n", *(*(pa + 3) + 3)); //pa[1][1] 3*2 + 3
+
+
+}
+```
+
+![20211212192259](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211212192259.png)
+
+4. 函数指针
+
+```c
+int fun(int a, int b); //函数
+int (*pfun)(int a, int b); //函数指针
+```
