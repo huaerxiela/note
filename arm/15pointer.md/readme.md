@@ -2,6 +2,9 @@
 
 对编译器而言, 指针仅仅就是一种类型
 
+![20211212192549](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211212192549.png)
+
+
 ## 声明/赋值/Sizeof
 
 ![20211209163004](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211209163004.png)
@@ -156,8 +159,9 @@ void testc() {
 2. 结构体指针
 
 3. 数组指针
-
+ 
 ```c
+int *a[5];          //指针数组
 int a[5];           //数组
 int (*pa)[5];       //数组指针
 ```
@@ -177,6 +181,13 @@ void test() {
     printf("%lx\n", *(*(pa + 1) + 1)); //pa[1][1] 1*2 + 1
     printf("%lx\n", *(*(pa + 3) + 3)); //pa[1][1] 3*2 + 3
 
+    char (*pb)[2][3];
+    pb = (char (*)[2][3])a;
+    printf("%lx\n", *(*(*(pb + 0) + 0) + 0)); // (0*2 + 0)*3 + 0
+    printf("%lx\n", *(*(*(pb + 2) + 3) + 4)); // (2*2 + 3)*3 + 4 = 25
+    printf("%lx\n", *(*(*(pb + 3) + 2) + 5)); // (3*2 + 2)*3 + 5 = 29
+    printf("%lx\n", *(*(*(pb + 2) + 2) + 2)); // (2*2 + 2)*3 + 2 = 20
+
 
 }
 ```
@@ -184,6 +195,8 @@ void test() {
 ![20211212192259](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211212192259.png)
 
 4. 函数指针
+
+![20211212232514](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211212232514.png)
 
 ```c
 int fun(int a, int b); //函数
