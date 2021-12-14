@@ -32,6 +32,10 @@
 
 [15.指针pointer汇编解析.md](https://github.com/nzcv/note/tree/master/arm/15pointer.md)
 
+[16.移位位运算.md](https://github.com/nzcv/note/tree/master/arm/16bit_operand.md)
+
+[17.逻辑位运算.md](https://github.com/nzcv/note/tree/master/arm/17logic_operand.md)
+
 ## Arm64相关文档
 
 [Arm64官方手册_查阅C6.2](https://github.com/nzcv/note/releases/download/note_books/DDI0487G_a_armv8_arm.pdf)
