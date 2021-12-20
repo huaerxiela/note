@@ -28,8 +28,24 @@ int main() {
 
 ## 虚函数表
 
-当类声明中有虚函数时, 编译器会自动生成虚函数表, 并在构造函数中进行初始化.
 
-![20211220081834](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211220081834.png)
+    当类声明中有虚函数时, 编译器会自动生成虚函数表, 并在构造函数中进行初始化.
+
+![20211220083147](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211220083147.png)
 
 
+
+## 虚函数调用
+
+![20211220083701](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211220083701.png)
+
+
+1. 直接调用和普通函数没有任何区别
+
+![20211220083408](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211220083408.png)
+
+2. 间接调用
+
+通过x10寄存器来确认具体应该调用哪一个函数
+
+![20211220083543](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211220083543.png)
