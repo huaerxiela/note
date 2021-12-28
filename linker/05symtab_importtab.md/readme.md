@@ -16,6 +16,7 @@ typedef struct
   Elf32_Section	st_shndx;		/* Section index */
 } Elf32_Sym;
 ```
+![20211227190249](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211227190249.png)
 
 
 ![20211227081625](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211227081625.png)
@@ -29,6 +30,26 @@ st_info(符号绑定信息)，低4位表示符号类型（Symbol Type）,高28�
 st_shndx(符号所在段) 如果符号是定义在目标文件中，那么符号的意思就是符号所在的段的在段表中的下标 ，此外还有几种特殊的定义如下：
 
 ![20211227081954](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211227081954.png)
+
+```shell
+symbol address=0x00000000, size=00000000, name=. type=0 bind=0 ndx=0
+symbol address=0x000005f0, size=00000000, name=. type=3 bind=0 ndx=a
+symbol address=0x00011000, size=00000000, name=. type=3 bind=0 ndx=13
+symbol address=0x00011008, size=00000000, name=_bss_end__. type=0 bind=1 ndx=fff1         //该符号包含了一个绝对的值
+symbol address=0x00000668, size=00000048, name=printf_hello. type=2 bind=1 ndx=a          //export   
+symbol address=0x00000000, size=00000000, name=printf. type=2 bind=1 ndx=0                //import
+symbol address=0x00000000, size=00000000, name=__cxa_finalize. type=2 bind=1 ndx=0        //import
+symbol address=0x0000062c, size=00000060, name=say_hello. type=2 bind=1 ndx=a             //export
+symbol address=0x00011008, size=00000000, name=__bss_start. type=0 bind=1 ndx=fff1        //该符号包含了一个绝对的值
+symbol address=0x00011008, size=00000000, name=__end__. type=0 bind=1 ndx=fff1            //该符号包含了一个绝对的值
+symbol address=0x00000000, size=00000000, name=__android_log_print. type=2 bind=1 ndx=0   //import
+symbol address=0x00011008, size=00000000, name=__bss_start__. type=0 bind=1 ndx=fff1      //该符号包含了一个绝对的值
+symbol address=0x00011008, size=00000000, name=_edata. type=0 bind=1 ndx=fff1             //该符号包含了一个绝对的值
+symbol address=0x00011008, size=00000000, name=__bss_end__. type=0 bind=1 ndx=fff1        //该符号包含了一个绝对的值
+symbol address=0x00011008, size=00000000, name=_end. type=0 bind=1 ndx=fff1               //该符号包含了一个绝对的值
+symbol address=0x00000000, size=00000000, name=__cxa_atexit. type=2 bind=1 ndx=0          //import
+```
+
 
 st_value(符号值) 符号如果是一个函数或者变量，符号值表示函数或者变量的地址，特殊地st_value还有以下几种可能：
 
@@ -124,6 +145,22 @@ Value为0，表示该符号位于Ndx段的第0个位置
 5. 有部分Name未定义的符号，符号名就是段名，比如Num为2、Ndx为1的的符号表示.text段，他的符号名就是段名
 
 6. SimpleSection.c符号的Ndx为ABS、Type为FILE，表示文件名的符号
+
+DT_JMPREL: 重定位记录的开始地址, 指向.rela.plt节在内存中保存的地址
+DT_PLTREL: 重定位记录的类型 RELA或RE, 这里是RELAL
+DT_PLTRELSZ: 重定位记录的总大小, 这里是24 * 2 = 48
+
+
+     导入表和导出表都需要依赖符号表
+
+# 重定位
+
+```c
+typedef struct elf32_rel {
+  Elf32_Addr    r_offset; //r_offset表示重定位入口的偏移。对于可重定位文件来说，这个值是该重定位入口所要修正的位置的第一个字节相对于节起始的偏移；对于可执行文件或共享对象文件来说，这个值是该重定位入口所要修正的位置的第一个字节的虚拟地址
+  Elf32_Word    r_info; //r_info表示重定位入口的类型和符号。这个成员的高8位表示重定位入口的类型，低24位表示重定位入口的符号在符号表中的下标
+} Elf32_Rel;
+```
 
 # 导入表
 
