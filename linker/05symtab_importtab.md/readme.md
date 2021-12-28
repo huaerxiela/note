@@ -142,3 +142,8 @@ Value为0，表示该符号位于Ndx段的第0个位置
 [https://blog.csdn.net/weixin_33895475/article/details/91930494](https://blog.csdn.net/weixin_33895475/article/details/91930494)
 
 [https://malware.news/t/executable-and-linkable-format-101-part-2-symbols/17960](https://malware.news/t/executable-and-linkable-format-101-part-2-symbols/17960)
+
+[https://www.freebuf.com/articles/system/193646.html](https://www.freebuf.com/articles/system/193646.html)
+
+
+[https://lwn.net/Articles/192624/](https://lwn.net/Articles/192624/)
