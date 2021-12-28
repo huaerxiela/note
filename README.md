@@ -40,6 +40,11 @@
 
 [Arm64官方手册_查阅C6.2](https://github.com/nzcv/note/releases/download/note_books/DDI0487G_a_armv8_arm.pdf)
 
+## ELF文件解析与自己编写linker
+
+https://github.com/nzcv/note/tree/master/linker/01elfheader.md 
+
+
 ## NDK对应clang版本号
 
 ```shell
@@ -52,8 +57,6 @@ android-ndk-r22b -> clang varsion 11.0.5 (match https://godbolt.org/)
 
 [https://yifengyou.gitbooks.io/learn-c/content/](https://yifengyou.gitbooks.io/learn-c/content/)
 
-<<<<<<< Updated upstream
 [https://www.one-tab.com/page/KxuI8ZPrQh66sloC1hb0gg](https://www.one-tab.com/page/KxuI8ZPrQh66sloC1hb0gg)
-=======
+
 [https://github.com/keystone-engine/keypatch](https://github.com/keystone-engine/keypatch)
->>>>>>> Stashed changes
