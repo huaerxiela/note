@@ -194,6 +194,12 @@ typedef struct elf32_rel {
 
 ![20211229193555](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211229193555.png)
 
+# 欸外知识
+
+我定义了一个const数组, 但是符号表解析并没有找到对应的数据, 原因是对应数据进入rodata区
+
+![20211229201456](https://cdn.jsdelivr.net/gh/nzcv/picgo/20211229201456.png)
+
 # 帮助
 
 [https://blog.csdn.net/weixin_33895475/article/details/91930494](https://blog.csdn.net/weixin_33895475/article/details/91930494)
