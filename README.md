@@ -42,8 +42,25 @@
 
 ## ELF文件解析与自己编写linker
 
+https://github.com/nzcv/note/tree/master/linker/00elf.md
+
 https://github.com/nzcv/note/tree/master/linker/01elfheader.md 
 
+https://github.com/nzcv/note/tree/master/linker/02mmap.md
+
+https://github.com/nzcv/note/tree/master/linker/05symtab.md
+
+https://github.com/nzcv/note/tree/master/linker/06import_dyn.plt.md
+
+https://github.com/nzcv/note/tree/master/linker/07hasthtable.md
+
+https://github.com/nzcv/note/tree/master/linker/08dyn.rel.md
+
+https://github.com/nzcv/note/tree/master/linker/09section.md
+
+代码实现:
+
+https://github.com/nzcv/note/releases/download/note_books/mylinker.zip
 
 ## NDK对应clang版本号
 
