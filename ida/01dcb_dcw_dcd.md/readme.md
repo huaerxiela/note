@@ -18,3 +18,7 @@
 
 https://blog.csdn.net/yiheliangmaoqian/article/details/78140793
 
+
+## IDA Pro F5 出现 positive sp value has been found
+
+https://bbs.pediy.com/thread-254990.htm
