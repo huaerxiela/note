@@ -3,7 +3,51 @@
 
 参数传递的本质: 将上层函数变量复制一份, 传给下层函数.
 
+# 过程调用标准AAPC(Arm Architecture Procedure Call)
+
+![20220118084646](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118084646.png)
+有了标准, 才能够进行C调用汇编或者汇编调用C
+
+
 # ARM32调用约定
+
+![20220118084824](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118084824.png)
+
+参数是不同位数传参情况, 额外的参数被caller进行入栈, callee进行出栈
+
+## 寄存器传参
+
+![20220118085114](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118085114.png)
+
+## 寄存器返回
+
+![20220118085234](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118085234.png)
+
+## 汇编调用C程序/C调用汇编程序
+
+![20220118085619](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118085619.png)
+
+## 32位实现64位加法运算
+
+![20220118085751](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118085751.png)
+
+## Arm的栈结构
+
+![20220118085916](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118085916.png)
+
+## 堆栈传参数与栈平衡
+
+![20220118090516](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118090516.png)
+
+## 子程序需要保存的寄存器
+
+![20220118091115](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118091115.png)
+
+![20220118091308](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118091308.png)
+
+## 子程序返回PUSH {LR}/ POP {PC}
+
+![20220118091739](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220118091739.png)
 
 ## 结构体传参
 
