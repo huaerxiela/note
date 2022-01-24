@@ -197,10 +197,6 @@ BR              X17                                ; printf
 * 使用x16, x17寄存器
 * 首先使用ADRP找到页基址, 然后加载对应页偏移, BR进行寄存器跳转
 
-## 总结
-
-上面的某些指令只是我们demo中遇到的, 后续还有其他指令我们再进行补充, 某些特征非常明显的我们需要产生映射关系. 为了寻找有趣人士, 强哥建立了一个wx群, 欢迎加我wx: yhnu1991, 你懂的.
-
 ## help link
 
 [https://github.com/yhnu/note/tree/master/arm/01register](https://github.com/yhnu/note/tree/master/arm/01register)
