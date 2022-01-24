@@ -1,5 +1,9 @@
 # note
 
+## 讨论区
+
+https://github.com/nzcv/note/discussions/categories/q-a
+
 ## Arm64汇编学习(站在编译器的角度学习)
 
 [01.Arm寄存器](https://github.com/nzcv/note/tree/master/arm/01register.md)
