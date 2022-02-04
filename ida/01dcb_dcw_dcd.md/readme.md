@@ -38,3 +38,8 @@ https://bbs.pediy.com/thread-254990.htm
 
 ## IDA查看机器指令
 
+
+## IDA切换主题
+
+    Options->Color
+![20220120113228](https://cdn.jsdelivr.net/gh/nzcv/picgo/20220120113228.png)
