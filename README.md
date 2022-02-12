@@ -81,3 +81,5 @@ android-ndk-r22b -> clang varsion 11.0.5 (match https://godbolt.org/)
 [https://www.one-tab.com/page/KxuI8ZPrQh66sloC1hb0gg](https://www.one-tab.com/page/KxuI8ZPrQh66sloC1hb0gg)
 
 [https://github.com/keystone-engine/keypatch](https://github.com/keystone-engine/keypatch)
+
+[31寸显示器你需要它](https://rectangleapp.com/)
